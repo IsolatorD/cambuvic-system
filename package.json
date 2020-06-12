@@ -1,0 +1,45 @@
+{
+  "name": "fruteria",
+  "version": "1.0.0",
+  "description": "My hunky-dory Nuxt.js project",
+  "author": "Yileyma Alfonso",
+  "private": true,
+  "scripts": {
+    "serve:dev": "yarn dev",
+    "dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x node server.js",
+    "build": "cross-env NODE_ENV=production node ./ace nuxtbuild",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "reset": "adonis migration:reset && adonis migration:run && adonis seed",
+    "deploy-heroku": "git add * && git commit -m 'deploy' && git push heroku master"
+  },
+  "dependencies": {
+    "@adonisjs/ace": "^4.0.7",
+    "@adonisjs/auth": "^2.0.10",
+    "@adonisjs/bodyparser": "^1.0.8",
+    "@adonisjs/cors": "^1.0.2",
+    "@adonisjs/fold": "^4.0.5",
+    "@adonisjs/framework": "^4.0.27",
+    "@adonisjs/ignitor": "^1.0.14",
+    "@adonisjs/lucid": "^4.0.22",
+    "@adonisjs/session": "^1.0.19",
+    "@adonisjs/shield": "^1.0.4",
+    "@adonisjs/validator": "^5.0.6",
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.10.3",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/toast": "^3.3.0",
+    "axios": "^0.19.2",
+    "cross-env": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "http-status-codes": "^1.4.0",
+    "moment": "^2.25.3",
+    "mysql": "^2.18.1",
+    "nuxt": "^2.0.0",
+    "nuxt-validate": "^1.0.1",
+    "pg": "^8.2.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.0.0",
+    "nodemon": "^1.18.9"
+  }
+}
